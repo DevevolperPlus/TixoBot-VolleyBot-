@@ -67,7 +67,7 @@ public class DribbleMode extends Skill {
         boolean approachFromLeft = ballCorrectionRadians < 0;
 
         if (approachFromLeft) {
-            renderer.drawString2d("approach from left", Color.white, new Point(2, 2), 2, 2);
+            renderer.drawString2d("Approach from left!", Color.white, new Point(2, 2), 2, 2);
         }
 
         Vector2 carToIntercept = intercept.getPosition().minus(car.position).flatten();
