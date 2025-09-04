@@ -1,4 +1,4 @@
-# VolleyBot
+# TixoBot [VolleyBot]
 
 ## How it was made
 
