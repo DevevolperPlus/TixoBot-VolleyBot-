@@ -81,7 +81,7 @@ public class VolleyBot implements Bot {
         Renderer renderer = BotLoopRenderer.forBotLoop(this);
 
         if (canPopBall) {
-            renderer.drawString2d("Can pop!", Color.white, new Point(10, 200), 2, 2);
+            renderer.drawString2d("Can Flick!", Color.white, new Point(10, 200), 2, 2);
             plan = new Plan()
                     .withStep(new TimedAction(0.2, new ControlsOutput().withJump()))
                     .withStep(new TimedAction(0.05, new ControlsOutput()))
@@ -97,7 +97,7 @@ public class VolleyBot implements Bot {
                 Intercept volleyPoint = InterceptCalculator.getVolleyPoint(ballPath, input.car, VOLLEY_HEIGHT);
 
                 if (volleyPoint != null) {
-                    renderer.drawString2d("Volley available!", Color.white, new Point(10, 200), 2, 2);
+                    renderer.drawString2d("Double Jump Shot available!", Color.white, new Point(10, 200), 2, 2);
 
                     plan = new Plan().withStep(new Volley());
                     return plan.getOutput(input, this);
