@@ -7,16 +7,10 @@ import rlbotexample.util.PortReader;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import java.awt.event.ActionListener;
-import java.util.OptionalInt;
-import java.util.Set;
 
-/**
- * See JavaAgent.py for usage instructions.
- *
- * Look inside SampleBot.java for the actual bot logic!
- */
 public class JavaExample {
+
+    private static final String VERSION = "1.0";
 
     public static void main(String[] args) {
 
@@ -26,15 +20,29 @@ public class JavaExample {
         PythonServer pythonServer = new PythonServer(pythonInterface, port);
         pythonServer.start();
 
-        JFrame frame = new JFrame("Java Bot");
+        JFrame frame = new JFrame("FixoBot v" + VERSION);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel panel = new JPanel();
         panel.setBorder(new EmptyBorder(10, 10, 10, 10));
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        panel.add(new JLabel("Listening on port " + port));
-        panel.add(new JLabel("I'm the thing controlling the Java bot, keep me open :)"));
-        JLabel botsRunning = new JLabel("Bots running: ");
+
+        // Cabeçalho e créditos
+        panel.add(new JLabel("FixoBot v" + VERSION));
+        panel.add(new JLabel("By DedeProGames"));
+        panel.add(Box.createVerticalStrut(8));
+
+        // Status do servidor Python
+        String portText = (port != null) ? String.valueOf(port) : "UNKNOWN";
+        panel.add(new JLabel("Listening on port " + portText));
+        panel.add(new JLabel("I'm the thing controlling the Java bot, keep me open!"));
+
+        frame.setContentPane(panel);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
+}        JLabel botsRunning = new JLabel("Bots running: ");
         panel.add(botsRunning);
         frame.add(panel);
 
