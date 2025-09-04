@@ -29,7 +29,7 @@ public class JavaExample {
 
         
         panel.add(new JLabel("FixoBot v" + VERSION));
-        panel.add(new JLabel("By DedeProGames"));
+        panel.add(new JLabel("By DedeProGames (Credits to tarehart)"));
         panel.add(Box.createVerticalStrut(8));
 
         
