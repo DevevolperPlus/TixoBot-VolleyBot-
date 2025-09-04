@@ -27,12 +27,12 @@ public class JavaExample {
         panel.setBorder(new EmptyBorder(10, 10, 10, 10));
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
-        // Cabeçalho e créditos
+        
         panel.add(new JLabel("FixoBot v" + VERSION));
         panel.add(new JLabel("By DedeProGames"));
         panel.add(Box.createVerticalStrut(8));
 
-        // Status do servidor Python
+        
         String portText = (port != null) ? String.valueOf(port) : "UNKNOWN";
         panel.add(new JLabel("Listening on port " + portText));
         panel.add(new JLabel("I'm the thing controlling the Java bot, keep me open!"));
